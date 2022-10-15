@@ -1,0 +1,90 @@
+:root {
+    --bgColor: #2c2c2c;
+    --fontColor: #d5d5d5;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    margin: 0;
+    font-size: 62.5%;
+    height: 100%;
+}
+
+body {
+    margin: 0 auto;
+    max-width: 800px;
+    font-size: 1.6rem;
+    min-height: 100%;
+    background: var(--bgColor);
+    color: var(--fontColor);
+    font-family: "Share Tech Mono", monospace;
+    text-align: center;
+}
+
+h1 {
+    margin: 20px;
+    text-transform: uppercase;
+    font-family: "Monoton", cursive;
+    font-size: 3rem;
+}
+h2 {
+    font-size: 2rem;
+}
+h4 {
+    margin-bottom: 0;
+    text-transform: uppercase;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 2px;
+    font-size: 10px;
+}
+
+.comp-hand,
+.player-hand {
+    font-size: 180px;
+}
+.hands,
+.score {
+    display: flex;
+    justify-content: space-around;
+}
+.result {
+    margin-top: 50px;
+}
+.score {
+    font-size: 1.3rem;
+}
+.play-btn {
+    width: 120px;
+    height: 40px;
+    border-radius: 999px;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-family: "Share Tech Mono", monospace;
+    background: var(--fontColor);
+}
+.player-options {
+    display: flex;
+    justify-content: center;
+    gap: 5vw;
+    margin: 0 50px;
+}
+.play-btn:hover {
+    background: rgb(72, 72, 72);
+    transform: scale(102%);
+    color: #bdbdbd;
+    font-family: "Share Tech Mono", monospace;
+}
+.play-btn:active {
+    transform: scale(98%);
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Monoton&family=Share+Tech+Mono&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="shortcut icon" href="favicon.svg" type="image/x-icon" />
+        <link rel="stylesheet" href="style.css" />
+        <title>RockShit</title>
+    </head>
+    <body>
+        <header>
+            <h1>Rock Paper Scissors</h1>
+        </header>
+        <main>
+            <div class="hands">
+                <div>
+                    <h4>Computer</h4>
+                    <key class="comp-hand">✊🏻</key>
+                </div>
+                <div>
+                    <h4>Player</h4>
+                    <key class="player-hand">✊🏻</key>
+                </div>
+            </div>
+            <h2 class="result">Pick an Option</h2>
+            <div class="score">
+                <div>
+                    <h3>Computer's Score</h3>
+                    <h2 class="comp-score">0</h2>
+                </div>
+                <div>
+                    <h3>Player's Score</h3>
+                    <h2 class="player-score">0</h2>
+                </div>
+            </div>
+            <div class="player-options">
+                <button data-action="rock" class="play-btn">Rock</button>
+                <button data-action="paper" class="play-btn">Paper</button>
+                <button data-action="scissors" class="play-btn">
+                    Scissors
+                </button>
+            </div>
+        </main>
+        <footer>
+            <p>&copy; All Right Reserved to RPS Corps.</p>
+        </footer>
+        <script src="script.js"></script>
+    </body>
+</html>
