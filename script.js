@@ -9,9 +9,9 @@ const result = document.querySelector(".result")
 const playerOptions = document.querySelectorAll(".player-options")
 
 const options = {
-    rock: "✊🏻",
-    paper: "🤚🏻",
-    scissors: "🖖🏻",
+    rock: "👊",
+    paper: "🖐",
+    scissors: "🖖",
 }
 const compOptions = ["rock", "paper", "scissors"]
 
