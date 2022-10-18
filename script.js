@@ -1,3 +1,4 @@
+//the functions are actually not reusable at all, this is how NOT to write functions
 // score of computer and player
 let cScore = 0
 let pScore = 0
