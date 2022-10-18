@@ -1,3 +1,4 @@
+// score of computer and player
 let cScore = 0
 let pScore = 0
 
@@ -8,43 +9,55 @@ const playerHand = document.querySelector(".player-hand")
 const result = document.querySelector(".result")
 const playerOptions = document.querySelectorAll(".player-options")
 
+//emoticons to be displayed according to the option the player and computer chooses
 const options = {
     rock: "👊",
     paper: "🖐",
     scissors: "🖖",
 }
+
+//options for computer, to be used by the random function
 const compOptions = ["rock", "paper", "scissors"]
 
+//selects the correct emoticon to be used according to the selection made by the player and
+//calls compSelection for computer's choice
 const playerSelection = (pOpt) => {
     if (pOpt) {
         playerHand.textContent = options[pOpt]
     }
     compSelection(pOpt)
 }
-const go = () => {
+
+//takes the input from the button pressed by the player and send to playerSelection
+const play = () => {
     playerOptions.forEach((btn) => {
         btn.addEventListener("click", (e) => {
             playerSelection(e.target.getAttribute("data-action"))
         })
     })
 }
-go()
 
+//takes a number as input and returns a random number from 0 to the input
 const random = (range) => {
     return Math.floor(Math.random() * range)
 }
 
+//selects computers option randomly using function random and displays the emoticon accordingly
 const compSelection = (pOpt) => {
     let cOpt = compOptions[random(compOptions.length)]
     compHand.textContent = options[cOpt]
 
     comparison(pOpt, cOpt)
 }
+
+//updates the scores and results on the DOM
 const updateScore = (txt) => {
     compScore.textContent = cScore
     playerScore.textContent = pScore
     result.textContent = txt
 }
+
+//compares the two selections[ by the computer and the player], changes the score and result to be displayed accordingly
 const comparison = (pOpt, cOpt) => {
     const pWon = "Player Wins!"
     const cWon = "Computer Wins!"
@@ -77,3 +90,5 @@ const comparison = (pOpt, cOpt) => {
         }
     }
 }
+
+play()
